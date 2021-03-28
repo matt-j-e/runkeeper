@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <main>
+    <h1>Your runs</h1>
+    <h4>(10 most recent)</h4>
+    <table class="data">
+    </table>
+    <form action="" class="add" method="post">
+      <h2>Add a new run</h2>
+      <p>
+      <label for="date">Date</label>
+      <input type="date" name="date" id="date">
+      </p>
+      <p>
+      <label for="duration">Duration (minutes)</label>
+      <input type="text" name="duration" id="duration" placeholder="Mins">
+      </p>
+      <p>
+      <label for="distance">Distance (Kms)</label>
+      <input type="text" name="distance" id="distance" placeholder="Kms">
+      </p>
+      <input type="submit" name="submit" id="addRun" value="Add">
+    </form>
+  </main>
+<script src="frontend.js"></script>
+<script>
+  loadDataTable();
+  const updated = document.querySelector('#addRun').addEventListener('click', updateData);
+  if (updated) {
+    updated.then(jsonResponse => console.log(jsonResponse));
+  }
+</script>
+</body>
+</html>
