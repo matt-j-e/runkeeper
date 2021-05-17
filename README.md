@@ -26,7 +26,7 @@ Add RUN | `POST /runs` | date [DATE], duration (seconds) [INTEGER] & distance (m
 Edit RUN | `PATCH /runs/:runId` | date [DATE], duration (seconds) [INTEGER] or distance (metres) [INTEGER]
 Delete RUN | `DELETE /runs/:runId` | n/a
 Get all RUNS | `GET /runs` | n/a
-Get a single ARTIST | `GET /runs/:runId` | n/a
+Get a single RUN | `GET /runs/:runId` | n/a
 get LATEST 10 RUNS | `GET /runs/latest` | n/a
 
 ## Frontend
